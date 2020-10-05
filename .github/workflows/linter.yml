@@ -4,8 +4,7 @@
 ## Linter GitHub Actions ##
 ###########################
 ###########################
-name: Super-Linter
-uses: github/super-linter@v3.11.0
+name: Lint Code Base
 
 #
 # Documentation:
@@ -17,7 +16,7 @@ uses: github/super-linter@v3.11.0
 #############################
 on:
   push:
-    branches-ignore: [master]
+    #branches-ignore: [master]
     # Remove the line above to run when pushing to master
   pull_request:
     branches: [master]
@@ -46,7 +45,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        uses: github/super-linter@v3.11.0
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
